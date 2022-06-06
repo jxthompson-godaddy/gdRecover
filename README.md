@@ -1,6 +1,6 @@
 # gdRecover
 
-gdRecover v3.6
+Change Log v3.6
 =========
 
 Used for Windows Shared Hosting to recover HARD alerting servers.
