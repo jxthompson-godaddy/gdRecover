@@ -95,7 +95,7 @@ elseif ($priValue -ne "") {
 		switch -wildcard ($priValue){
 		'p3*' { $formattedsysName = "$priValue.PHX3.GDHOSTING.GDG" }
 		'a2*' { $formattedsysName =  "$priValue.IAD2.GDHOSTING.GDG" }
-		'n1*' { $formattedsysName =  "$priValue.AMS1.GDHOSTING.GDG" }
+		'n3*' { $formattedsysName =  "$priValue.AMS1.GDHOSTING.GDG" }
 		'sg2*' { $formattedsysName =  "$priValue.SIN2.GDHOSTING.GDG" }
 		default { $formattedsysName = $priValue }
 	}
