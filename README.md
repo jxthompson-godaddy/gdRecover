@@ -1,7 +1,7 @@
 # gdRecover
 Will PSRemote to a windows host to clear top running procs by mem usage. w3wp.exe. php-cgi.exe and dump processes.
 
-Change Log v3.6
+Change Log v3.7
 =========
 
 Used for Windows Shared Hosting to recover HARD alerting servers.
