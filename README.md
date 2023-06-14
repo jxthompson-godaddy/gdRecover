@@ -26,6 +26,18 @@ gdRecover does this by running a TaskKill against the w3wp.exe and php-cgi.exe p
 
 If you have any issues running this script, please follow the below.
 
-1. To setup powershell, here is a great local article - https://confluence.godaddy.com/display/EB/Powershell+Script+Execution+Guide
-2. Make sure to set the execution policy (covered above as well) - Set-ExecutionPolicy RemoteSigned
-3. Make sure to add gdhosting to the trusted hosts list - Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '*.gdhosting.gdg' -Force | Out-Null
+To setup powershell, here is a great local article - https://confluence.godaddy.com/display/EB/Powershell+Script+Execution+Guide
+
+Make sure to set the execution policy (covered above as well) - Set-ExecutionPolicy RemoteSigned
+
+Make sure to add gdhosting to the trusted hosts list - Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '*.gdhosting.gdg' -Force | Out-Null
+
+If you still have problems with the above and getting the same error. Just manually update your systems Registry with "regedit"
+
+In Regedit you can paste this into find to open it up
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client]
+
+Delete what you have for domains and replace with this.
+*.jomax.paholdings.com,*.dc1.corp.gd,*.int.godaddy.com,*.prod.iad2.gdg,*.prod.iad2.secureserver.net,*.iad2.gdg,*.gdhosting.gdg,*.phx3.gdhosting.gdg,*.ams1.gdhosting.gdg,*.sin2.gdhosting.gdg,*.prod.phx3.gdg,*.cloud.phx3.gdg
+
+If your seeing a Kerberos Authentication Error, then run - KList purge
