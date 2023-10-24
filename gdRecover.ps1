@@ -93,10 +93,12 @@ elseif ($priValue -ne "") {
 
 		# Switch by Paul Smith
 		switch -wildcard ($priValue){
-		'p3*' { $formattedsysName = "$priValue.PHX3.GDHOSTING.GDG" }
-		'a2*' { $formattedsysName =  "$priValue.IAD2.GDHOSTING.GDG" }
-		'n3*' { $formattedsysName =  "$priValue.AMS1.GDHOSTING.GDG" }
+		'p3nwvpweb*' { $formattedsysName = "$priValue.PHX3.GDHOSTING.GDG" }
+  		'p3nwshhv*' { $formattedsysName =  "$priValue.GDHOSTING.GDG" }
+		'a2nwvpweb*' { $formattedsysName =  "$priValue.IAD2.GDHOSTING.GDG" }
+  		'a2nwshhv*' { $formattedsysName =  "$priValue.GDHOSTING.GDG" }
 		'sg2*' { $formattedsysName =  "$priValue.SIN2.GDHOSTING.GDG" }
+		'n3*' { $formattedsysName =  "$priValue.AMS1.GDHOSTING.GDG" }
 		default { $formattedsysName = $priValue }
 	}
 
